@@ -13,7 +13,8 @@ public class TempConverter {
     }
 
 
-    private static void convert(Scanner scanner) {
+    private static <NoSuchElementExceptionException extends Throwable> void convert(Scanner scanner) {
+      try {
         String line;
         while (!(line = scanner.nextLine().trim()).isEmpty()) {
           char finalChar = line.toUpperCase().charAt(line.length() - 1);
@@ -25,6 +26,8 @@ public class TempConverter {
             System.out.printf("%.3fC%n", fahrenheitToCelsius(fahrenheit));
           }
         }
+      } catch (NoSuchElementExceptionException expected) {
+      }
     }
 
   private static double parseTemperature(String line) {
