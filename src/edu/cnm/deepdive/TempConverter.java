@@ -26,7 +26,7 @@ public class TempConverter {
             System.out.printf("%.3fC%n", fahrenheitToCelsius(fahrenheit));
           }
         }
-      } catch (NoSuchElementExceptionException expected) {
+      } catch (NoSuchElementException expected) {
       }
     }
 
